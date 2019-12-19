@@ -23,10 +23,14 @@ cameraTrigger.onclick = function() {
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
     cameraOutput.classList.add("taken");
+    QrScanner.scanImage(document.getElementById("camera--output"))
+    .then(result => alert("QR Code : " + result))
+    .catch(err => alert(err))
 };// Start the video stream when the window loads
 window.addEventListener("load", () => {
     cameraStart();
     
     const qrScanner = new QrScanner(document.getElementById("camera--view"), result => alert("QR Code = ", result));
+    qrScanner.start();
 }, false);
 
