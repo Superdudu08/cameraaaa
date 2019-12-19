@@ -1,4 +1,4 @@
-import QrScanner from './node_modules/qr-scanner/src/qr-scanner.js';
+import QrScanner from 'qr-scanner';
 // Set constraints for the video stream
 var constraints = { video: { facingMode: "environment" }, audio: false };// Define constants
 const cameraView = document.querySelector("#camera--view"),
