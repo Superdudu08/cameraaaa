@@ -27,6 +27,6 @@ cameraTrigger.onclick = function() {
 window.addEventListener("load", () => {
     cameraStart();
     
-    const qrScanner = new QrScanner(document.getElementById("camera--view"), result => alert("QR Code = ", result));
+    //const qrScanner = new QrScanner(document.getElementById("camera--view"), result => alert("QR Code = ", result));
 }, false);
 
