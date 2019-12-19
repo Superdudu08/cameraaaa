@@ -10,7 +10,7 @@ function cameraStart() {
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
-        track = stream.getTracks()[0];
+        const track = stream.getTracks()[0];
         cameraView.srcObject = stream;
     })
     .catch(function(error) {
@@ -27,6 +27,6 @@ cameraTrigger.onclick = function() {
 window.addEventListener("load", () => {
     cameraStart();
     
-    //const qrScanner = new QrScanner(document.getElementById("camera--view"), result => alert("QR Code = ", result));
+    const qrScanner = new QrScanner(document.getElementById("camera--view"), result => alert("QR Code = ", result));
 }, false);
 
