@@ -1,4 +1,4 @@
-import QrScanner from 'qr-scanner';
+import QrScanner from './qr-scanner.min.js';
 // Set constraints for the video stream
 var constraints = { video: { facingMode: "environment" }, audio: false };// Define constants
 const cameraView = document.querySelector("#camera--view"),
@@ -25,4 +25,5 @@ cameraTrigger.onclick = function() {
 };// Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
 
+QrScanner.WORKER_PATH = './qr-scanner.min.js'
 const qrScanner = new QrScanner(cameraOutput, result => alert("QR Code = ", result));
