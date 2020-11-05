@@ -1,1 +1,1 @@
-# cameraaaa
+This repository contains a proof of concept for using the camera of a device to scan QR code. It was used during a school project to create a game involving scanning QR codes. 
